@@ -6,8 +6,18 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Hello
+module Shop
   class Application < Rails::Application
+    if defined?(FactoryBotRails)
+      initializer after: "factory_bot.set_factory_paths" do
+        require 'spree/testing_support/factory_bot'
+        FactoryBot.definition_file_paths = [
+          *Spree::TestingSupport::FactoryBot.definition_file_paths,
+          Rails.root.join('spec/fixtures/factories'),
+        ]
+      end
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 

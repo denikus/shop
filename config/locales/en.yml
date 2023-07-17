@@ -4,11 +4,11 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t "hello"
+#     I18n.t "shop"
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t("hello") %>
+#     <%= t("shop") %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -30,4 +30,4 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello!"
+  shop: "Shop!"

@@ -45,6 +45,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Execute jobs in the background [https://github.com/mperham/sidekiq]
 gem "sidekiq", "~> 7.1"
 
+gem "solidus", "~> 4.1.0"
+
+gem "libxml-ruby"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -69,4 +73,82 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+gem "solidus_auth_devise", "~> 2.5"
+gem "responders"
+gem "canonical-rails"
+gem "solidus_support"
+gem "truncate_html"
+gem "view_component", "~> 3.0"
+
+group :test do
+  gem "capybara-screenshot", "~> 1.0"
+  gem "database_cleaner", "~> 1.7"
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "rails-controller-testing", "~> 1.0.5"
+  gem "rspec-activemodel-mocks", "~> 1.1.0"
+  gem "factory_bot", ">= 4.8"
+  gem "factory_bot_rails"
+  gem "ffaker", "~> 2.13"
+  gem "rubocop", "~> 1.0"
+  gem "rubocop-performance", "~> 1.5"
+  gem "rubocop-rails", "~> 2.3"
+  gem "rubocop-rspec", "~> 2.0"
+end
+gem "responders"
+gem "canonical-rails"
+gem "solidus_support"
+gem "truncate_html"
+gem "view_component", "~> 3.0"
+
+group :test do
+  gem "capybara-screenshot", "~> 1.0"
+  gem "database_cleaner", "~> 1.7"
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "rails-controller-testing", "~> 1.0.5"
+  gem "rspec-activemodel-mocks", "~> 1.1.0"
+  gem "factory_bot", ">= 4.8"
+  gem "factory_bot_rails"
+  gem "ffaker", "~> 2.13"
+  gem "rubocop", "~> 1.0"
+  gem "rubocop-performance", "~> 1.5"
+  gem "rubocop-rails", "~> 2.3"
+  gem "rubocop-rspec", "~> 2.0"
+end
+
+gem "solidus_braintree", "~> 3.0"
+gem "responders"
+gem "canonical-rails"
+gem "solidus_support"
+gem "truncate_html"
+gem "view_component", "~> 3.0"
+
+group :test do
+  gem "capybara-screenshot", "~> 1.0"
+  gem "database_cleaner", "~> 1.7"
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "rails-controller-testing", "~> 1.0.5"
+  gem "rspec-activemodel-mocks", "~> 1.1.0"
+  gem "factory_bot", ">= 4.8"
+  gem "factory_bot_rails"
+  gem "ffaker", "~> 2.13"
+  gem "rubocop", "~> 1.0"
+  gem "rubocop-performance", "~> 1.5"
+  gem "rubocop-rails", "~> 2.3"
+  gem "rubocop-rspec", "~> 2.0"
+end
+
+group :test do
+  gem "vcr"
+  gem "webmock"
 end

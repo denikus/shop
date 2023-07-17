@@ -1,8 +1,8 @@
 default: &default
   adapter: "postgresql"
   encoding: "unicode"
-  database: "<%= ENV.fetch("POSTGRES_DB") { "hello" } %>"
-  username: "<%= ENV.fetch("POSTGRES_USER") { "hello" } %>"
+  database: "<%= ENV.fetch("POSTGRES_DB") { "shop" } %>"
+  username: "<%= ENV.fetch("POSTGRES_USER") { "shop" } %>"
   password: "<%= ENV.fetch("POSTGRES_PASSWORD") { "password" } %>"
   host: "<%= ENV.fetch("POSTGRES_HOST") { "postgres" } %>"
   port: "<%= ENV.fetch("POSTGRES_PORT") { 5432 } %>"
@@ -11,12 +11,12 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV.fetch("POSTGRES_DB") { "hello" } %>_development
+  database: <%= ENV.fetch("POSTGRES_DB") { "shop" } %>_development
 
 test:
   <<: *default
-  database: <%= ENV.fetch("POSTGRES_DB") { "hello" } %>_test
+  database: <%= ENV.fetch("POSTGRES_DB") { "shop" } %>_test
 
 production:
   <<: *default
-  database: <%= ENV.fetch("POSTGRES_DB") { "hello" } %>_production
+  database: <%= ENV.fetch("POSTGRES_DB") { "shop" } %>_production

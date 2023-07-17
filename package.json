@@ -1,5 +1,5 @@
 {
-  "name": "hello",
+  "name": "shop",
   "private": true,
   "dependencies": {
     "@hotwired/stimulus": "3.2.1",
