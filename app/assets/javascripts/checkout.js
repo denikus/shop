@@ -13,7 +13,7 @@ Solidus.disableSaveOnClick = () => {
   });
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('turbo:load', () => {
   const termsCheckbox = document.getElementById('accept_terms_and_conditions');
 
   if (termsCheckbox) {

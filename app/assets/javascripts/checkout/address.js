@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('turbo:load', () => {
   if (document.getElementById('checkout_form_address')) {
     // Hidden by default to support browsers with javascript disabled
     document.querySelectorAll('.js-address-fields')

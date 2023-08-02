@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("turbo:load", function () {
   const optionTypeSelector = document.querySelectorAll(".selection-items");
   for (var i = 0; i < optionTypeSelector.length; i++) {
     optionTypeSelector[i].addEventListener("click", onSelection);

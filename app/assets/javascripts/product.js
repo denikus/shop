@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('turbo:load', () => {
   const radios = document.querySelectorAll("[data-js='variant-radio']");
   const thumbnailsLinks = document
     .querySelectorAll("[data-js='product-thumbnail'] a, [data-js='variant-thumbnail'] a");
