@@ -18,24 +18,6 @@ x-app: &default-app
   volumes:
     - "${DOCKER_WEB_VOLUME:-./public:/app/public}"
 
-#x-assets: &default-assets
-#  build:
-#    context: "."
-#    target: "assets"
-#    args:
-#      - "UID=${UID:-1000}"
-#      - "GID=${GID:-1000}"
-#      - "RAILS_ENV=${RAILS_ENV:-production}"
-#      - "NODE_ENV=${NODE_ENV:-production}"
-#  env_file:
-#    - ".env"
-#  profiles: ["assets"]
-#  restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
-#  stop_grace_period: "3s"
-#  tty: true
-#  volumes:
-#    - ".:/app"
-
 services:
   postgres:
     deploy:
@@ -46,7 +28,6 @@ services:
     environment:
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-      # POSTGRES_DB: "${POSTGRES_DB}"
     image: "postgres:15.3-bullseye"
     profiles: ["postgres"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
@@ -107,14 +88,6 @@ services:
     ports:
       - "${DOCKER_CABLE_PORT_FORWARD:-127.0.0.1:28080}:28080"
     profiles: ["cable"]
-
-#  js:
-#    <<: *default-assets
-#    command: "yarn build"
-#
-#  css:
-#    <<: *default-assets
-#    command: "yarn build:css"
 
 volumes:
   postgres: {}
