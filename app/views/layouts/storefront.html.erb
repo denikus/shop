@@ -9,8 +9,6 @@
     <%= csrf_meta_tags %>
 
     <%= javascript_include_tag 'solidus_starter_frontend', "data-turbo-track": "reload", defer: true %>
-    <%#= stylesheet_link_tag 'solidus_starter_frontend', media: 'screen' %>
-
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= stylesheet_link_tag "solidus_starter_frontend", "data-turbo-track": "reload", media: 'screen' %>
 
@@ -19,7 +17,7 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <%= yield :head %>
   </head>
-<!--  data-turbo="false"-->
+  <!--  data-turbo="false"-->
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" >
     <%= render 'layouts/header', taxons: @taxons, taxon: @taxon %>
     <%= flash_messages %>
